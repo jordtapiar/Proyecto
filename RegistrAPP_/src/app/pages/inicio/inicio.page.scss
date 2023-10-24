@@ -1,0 +1,30 @@
+.titulo {
+    font-style: italic;
+    text-decoration: underline;
+    color: #d3c509;
+}
+
+.logo{
+    padding: 7%;
+}
+
+.buttons{
+    display: block;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 2%;
+}
+
+.div_fondo{
+    background-color: var(--ion-color-uc);
+    width: 100%;
+    height: 100%;
+}
+
+.header-color {
+    --background: linear-gradient( #0e0b44, #100f6b );
+}
+
+.contenido {
+    --background: linear-gradient( #100f6b, #e0ac08 );
+} 
