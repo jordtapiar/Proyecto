@@ -1,0 +1,15 @@
+<ion-header>
+  <app-encabezadolistasis></app-encabezadolistasis>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngFor="let aux of listaAsistencia">
+    <ion-card-header>
+      <h2 class="ion-text-center">{{aux.cursosec}}</h2>
+    </ion-card-header>
+    <ion-card-content>
+      <h3>Fecha de la clase: {{aux.fecha}}</h3>
+      <h3>Estado: {{aux.asistencia}}</h3>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

@@ -1,0 +1,25 @@
+<ion-header>
+  <app-encabezadoaddasis></app-encabezadoaddasis>
+  </ion-header>
+  
+  <ion-content>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+            <ion-item>
+              <ion-label style="color:rgb(0, 0, 0);" position="floating">Siglas y sección del curso:</ion-label>
+              <ion-input [(ngModel)]="asistencia.cursosec" clearInput></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label style="color:rgb(255, 255, 255);" position="floating">Fecha de la clase:</ion-label>
+              <ion-datetime [(ngModel)]="asistencia.fecha" clearInput displayFormat="DD-MM-YYYY" value="2021-01-19" placeholder="Fecha de la clase..."></ion-datetime>
+            </ion-item>
+            <ion-item>
+              <ion-label>¿Asististe?</ion-label>
+              <ion-toggle [(ngModel)]="asistencia.asistencia" slot="end" name="¿Asististe?" checked></ion-toggle>
+            </ion-item>
+          <ion-button (click)="editar ? actualizar() : guardarAsistencia(cursosec, fecha, asistencia)" color="primary" expand="block" style="margin-top:20px;">{{editar ? 'Actualizar Asistencia' : 'Registrar Asistencia'}}</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-content>

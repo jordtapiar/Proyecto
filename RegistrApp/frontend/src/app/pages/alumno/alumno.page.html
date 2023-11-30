@@ -1,0 +1,26 @@
+<ion-header>
+  <app-encabezado></app-encabezado>
+  
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+
+  <div id=intro>
+    <strong>Bienvenid@ Alumn@!</strong>
+    <p>Estas listo para registrar tu asistencia!, solo debes solicitar a tu docente que genére el codigo QR para poder escanearlo.</p>
+  </div>
+
+  <div id=banner>
+    <strong>Escanea ahora!:</strong>
+    <ion-button expand="block" color="success" routerLink="/qr"><ion-icon name="qr-code-outline" slot="end"></ion-icon>Abrir Escáner QR</ion-button>
+  </div>
+  <div id=agenda>
+    <strong></strong>
+    <ion-button expand="block" color="warning" routerLink="/agenda"><ion-icon name="list-outline" slot="end"></ion-icon>Ir a Agenda</ion-button>
+  </div>
+  <div id=banner>
+    <strong>¿Ya te vas?</strong>
+    <ion-button expand="block" color="danger" routerLink="/"><ion-icon name="log-out-outline" slot="end"></ion-icon>Cerrar sesión y salir</ion-button>
+  </div>
+</ion-content>

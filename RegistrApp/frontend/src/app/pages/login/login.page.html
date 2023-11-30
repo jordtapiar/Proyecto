@@ -1,0 +1,26 @@
+<ion-header [translucent]="true">
+  <app-encabezadologin></app-encabezadologin>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+            <ion-item>
+              <ion-label position="floating">Correo electrónico</ion-label>
+              <ion-input #username type="email"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label position="floating">Contraseña</ion-label>
+              <ion-input #pass type="password"></ion-input>
+            </ion-item>
+            <ion-button expand="block" color="success" (click)="login(username, pass)">
+              <ion-icon name="log-in-outline" slot="end"></ion-icon> Acceder
+            </ion-button>
+            <ion-button expand="block" color="warning" routerLink="/forgot" routerDirection="forward">
+               ¿Olvidaste tu contraseña?
+            </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

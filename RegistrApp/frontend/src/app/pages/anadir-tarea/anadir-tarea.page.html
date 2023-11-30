@@ -1,0 +1,29 @@
+<ion-header>
+<app-encabezadoadd></app-encabezadoadd>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+          <ion-item>
+            <ion-label style="color:rgb(255, 255, 255);" position="floating">Título:</ion-label>
+            <ion-input [(ngModel)]="tarea.titulo" clearInput></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label style="color:rgb(255, 255, 255);" position="floating">Descripción de la tarea:</ion-label>
+            <ion-input [(ngModel)]="tarea.descripcion" clearInput></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label>Fecha de inicio:</ion-label>
+            <ion-datetime [(ngModel)]="tarea.inicio" clearInput displayFormat="DD-MM-YYYY" value="2021-01-19" placeholder="Elige una fecha..."></ion-datetime>
+          </ion-item>
+          <ion-item>
+            <ion-label>Fecha límite:</ion-label>
+            <ion-datetime [(ngModel)]="tarea.limite" clearInput displayFormat="DD-MM-YYYY" value="2021-01-19" placeholder="Elige una fecha..."></ion-datetime>
+          </ion-item>
+        <ion-button (click)="editar ? actualizar() : guardarTarea(titulo, descripcion, inicio, limite)" color="primary" expand="block" style="margin-top:20px;">{{editar ? 'Actualizar Tarea' : 'Crear nueva Tarea'}}</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

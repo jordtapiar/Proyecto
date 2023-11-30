@@ -1,0 +1,6 @@
+{
+	"appId": "com.registrapp.duoc.cl",
+	"appName": "RegistrApp",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}

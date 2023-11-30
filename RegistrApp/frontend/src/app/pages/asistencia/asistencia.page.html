@@ -1,0 +1,25 @@
+<ion-header>
+  <app-encabezado></app-encabezado>
+  
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+
+  <div id=intro>
+    <strong>¡Bienvenido al Registro de Asistencia!</strong>
+    <p>Selecciona una opción:</p>
+  </div>
+
+  <div id=banner>
+    <ion-button expand="block" color="success" routerLink="/add-asistencia"><ion-icon name="add-circle-outline" slot="end"></ion-icon>Registrar Asistencia</ion-button>
+  </div>
+  <div id=agenda>
+    <strong></strong>
+    <ion-button expand="block" color="warning" routerLink="/lista-asistencia"><ion-icon name="list-outline" slot="end"></ion-icon>Ver Asistencia</ion-button>
+  </div>
+  <div id=banner>
+    <strong>¿Ya te vas?</strong>
+    <ion-button expand="block" color="danger" routerLink="/alumno"><ion-icon name="log-out-outline" slot="end"></ion-icon>Volver al home</ion-button>
+  </div>
+</ion-content>

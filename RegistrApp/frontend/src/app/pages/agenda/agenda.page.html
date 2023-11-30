@@ -1,0 +1,25 @@
+<ion-header>
+  <app-encabezadolist></app-encabezadolist>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngFor="let aux of listaTarea">
+    <ion-card-header>
+      <h2 class="ion-text-center">{{aux.titulo}}</h2>
+    </ion-card-header>
+    <img  [src]=" aux.imagen ? 'https://registrapp-app.herokuapp.com' + aux.imagen.url : 'https://c.tenor.com/FE6caXZ5sS0AAAAC/confused-wth.gif'">
+    <ion-card-content>
+      <h3>Descripción: {{aux.descripcion}}</h3>
+      <h3>Fecha inicio: {{aux.inicio}}</h3>
+      <h3>Fecha límite: {{aux.limite}}</h3>
+      <ion-buttons>
+        <ion-button (click)="eliminarTarea(aux.id)">
+          <ion-icon name="trash"></ion-icon>
+        </ion-button>
+        <ion-button [routerLink]="['/','tareas','edit', aux.id]">
+          <ion-icon name="pencil-outline"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

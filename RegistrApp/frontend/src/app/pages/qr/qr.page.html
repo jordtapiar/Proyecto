@@ -1,0 +1,52 @@
+<ion-header>
+  <app-encabezado></app-encabezado>
+  
+</ion-header>
+
+<ion-content>
+  <input #fileinput type="file" accept="image/*;capture=camera" hidden 
+  (change)="handleFile($event.target.files)">
+
+  <div id=intro>
+    <strong>Bienvenido al Escáner QR!</strong>
+    <p>Desde aquí podrás escanear un Código QR provisto por tu docente para registrar tu asistencia a clases!</p>
+    
+    <p>Para empezar, elige una opción:</p>
+  </div>
+
+  <ion-button expand="block" (click)="captureImage()">
+    <ion-icon slot="start" name="camera"></ion-icon>
+    Escanear QR desde imagen
+  </ion-button>
+
+  <ion-button expand="block" (click)="startScan()">
+    <ion-icon slot="start" name="scan-outline"></ion-icon>
+    Escanear QR desde cámara
+  </ion-button>
+
+  <ion-button expand="block" color="danger" routerLink="/alumno"><ion-icon name="log-out-outline" slot="end"></ion-icon>Volver al home</ion-button>
+
+  <ion-button expand="block" (click)="reset()" color="warning" *ngIf="scanResult">
+    <ion-icon slot="start" name="refresh"></ion-icon>
+    Restablecer escáner
+  </ion-button>
+
+  <video #video [hidden]="!scanActive" width="100%"></video>
+  <canvas #canvas hidden></canvas>
+
+  <ion-button expand="block" (click)="stopScan()" color="danger" *ngIf="scanActive">
+    <ion-icon slot="start" name="close"></ion-icon>
+    Detener escáner
+  </ion-button>
+
+  <ion-card *ngIf="scanResult">
+    <ion-card-header>
+      <ion-card-title>Código QR</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Se detectó un Código QR de RegistrApp
+    </ion-card-content>
+  </ion-card>
+
+
+</ion-content>
